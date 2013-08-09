@@ -1,6 +1,6 @@
 require 'rspec/example_disabler'
 
-RSpec::ExampleDisabler.disable_example('RSpec::ExampleDisabler test example ' + 
+RSpec::ExampleDisabler.disable_example('RSpec::ExampleDisabler test example ' +
                                        'should be pending and thus not fail',
                                        'Testing rspec-example-disabler')
 
