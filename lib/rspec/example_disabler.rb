@@ -8,9 +8,7 @@ module RSpec::ExampleDisabler
       c.around(:each) do |example|
         description = example.metadata[:full_description]
         if @@disabled_examples.include?(description)
-          reasons = @@disabled_examples[description].join(', ')
           example.metadata[:pending] = true
-          example.metadata[:execution_result][:pending_message] = "Disabled by rspec-example_disabler. Reason: #{reasons}"
         else
           example.run
         end
